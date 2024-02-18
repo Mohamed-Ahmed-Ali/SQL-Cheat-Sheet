@@ -98,7 +98,7 @@ SQL> CREATE TABLE CUSTOMERS(
 ID 	INT NOT NULL,
 NAME 	VARCHAR (20) NOT NULL,
 AGE 	INT NOT NULL,
-ADDRESS CHAR (25) ,
+ADDRESS CHAR (25),
 SALARY 	DECIMAL (18, 2),
 PRIMARY KEY (ID));
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -154,7 +154,7 @@ FROM EXISTING_TABLE_NAME
 [WHERE condition]
 INTO NEW_TABLE_NAME;
 ```
-## DDL => INDEX -
+## DDL => INDEX
 ```bash
 What is an index?
 ----------------------------------------------------------------
