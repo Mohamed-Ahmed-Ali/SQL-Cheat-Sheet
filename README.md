@@ -642,61 +642,61 @@ ________________________________________________________________________________
 </summary><p>
 
 ```bash
-_______________________________________________________________________________________________________________________________________________________
+__________________________________________________________________________________________
 Consistency
-TCL : Transitional Control Language
-_______________________________________________________________________________________________________________________________________________________
-Transactions have the following four standard proper ties, usually referred to by the acronym ACID.
+TCL: Transitional Control Language
+__________________________________________________________________________________________
+Transactions have four standard properties, usually referred to by the acronym ACID.
 • Atomicity: ensures that all operations within the work unit are completed successfully.
-Otherwise, the transaction is aborted at the point of failure and all the previous operations are rolled back to their former state.
+Otherwise, the transaction is aborted at the point of failure, and all the previous
+operations are rolled back to their former state.
 • Consistency: ensures that the database properly changes states upon a successfully committed transaction.
 • Isolation: enables transactions to operate independently of and transparent to each other.
-• Durabi lity: ensures that the result or effect of a committed
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+• Durability: ensures that the result or effect of a committed
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 transaction persists in case of a system failure.
 ----------------------------------------------------------------
 The following commands are used to control transactions.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ```
 ```bash
 --------------------* TCL => COMMIT *-------------------
 • COMMIT: to save the changes.
 ----------------------------------------------------------------
 Syntax> COMMIT;
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ```
 ```bash
 --------------------* TCL => ROLLBACK *-------------------
 • ROLLBACK: to roll back the changes.
 ----------------------------------------------------------------
 Syntax> ROLLBACK;
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ```
 ```bash
 --------------------* TCL => SAVEPOINT *-------------------
-• SAVEPOINT: creates points within the groups of transa ctions in which to ROLLBACK.
+• SAVEPOINT: creates points within the groups of transactions to ROLLBACK.
 ----------------------------------------------------------------
 Syntax> SAVEPOINT SAVEPO INT_NAME;
 ROLLBACK TO SAVEPO INT_NAME;
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ```
 ```bash
 --------------------* TCL => SET TRANSACTION *-------------------
 • SET TRANSACTION: Places a name on a transaction.
 ----------------------------------------------------------------
 Syntax> SET TRANSACTION [ READ WRITE | READ ONLY ];
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ```
 ```bash
 --------------------* TCL => The RELEASE SAVEPOINT *-------------------
 • The RELEASE SAVEPOINT
 ----------------------------------------------------------------
 Syntax> RELEASE SAVEPOINT
-SAVEPO INT NAME;
-_______________________________________________________________________________________________________________________________________________________
+SAVEPOINT NAME;
+____________________________________________________________________________________
 ```
 
-```
 --------------------------------------------------------------------------------------------------
 </p>
 </details>  
