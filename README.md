@@ -196,40 +196,43 @@ The following guidelines indicate when the use of an index should be reconsidere
 
 <details><summary>DML : Data Manipulation Language</summary><p>
 
-# 
-
+# Data
+## DML => Insert 
 ```bash
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Data
-DML : Data Manipulation Language
-_______________________________________________________________________________________________________________________________________________________
-
---------------------* DML => Insert *-------------------
 Syntax> INSERT INTO TABLE_NAME
 (column1, column2, column3,...columnN)]
 VALUES (value1, value2, value3 ,...valueN);
-_______________________________________________________________________________________________________________________________________________________
---------------------* DML => Update *-------------------
+```
+##  DML => Update
+
+```bash
 Syntax> UPDATE table_name
 SET column1 = value1, column2
 = value2...., columnN = valueN
 WHERE [condition];
-_______________________________________________________________________________________________________________________________________________________
---------------------* DML => Delete *-------------------
+
+
+## DML => Delete
+```bash
+
 Syntax> DELETE FROM table_name
 WHERE [condition];
-_______________________________________________________________________________________________________________________________________________________
---------------------* DML => Merge *-------------------
+
+
+## DML => Merge 
+```bash
+
 Syntax> MERGE INTO target_table USING source_table
 ON merge_condition
 WHEN MATCHED THEN
   UPDATE SET column1 = value1, column2 = value2, ...
  
 [WHEN NOT MATCHED THEN INSERT (column1, column2, ...) VALUES (value1, value2, ...)]
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-MERGE for SCD:
-----------------------------------------------------------------
+
+
+## MERGE for SCD:
+```bash
 Implementing SCD types: The MERGE statement is particularly helpful for implementing different types of Slowly Changing Dimensions (SCDs). Here's how:
 Type 1: Use UPDATE within WHEN MATCHED to update existing dimensions with new values.
 Type 2: Use INSERT within WHEN NOT MATCHED to create new records with new values, while marking existing ones as inactive.
@@ -244,8 +247,12 @@ Alternatives:
 ----------------------------------------------------------------
 Separate statements: For simple ETL jobs, using separate INSERT and UPDATE statements can be more straightforward and efficient.
 ETL tools: Many ETL tools offer specialized features for SCD implementations and complex data transformations.
-_______________________________________________________________________________________________________________________________________________________
---------------------* DML => Create or Drop Views or Temp Tables *-------------------
+
+```
+
+##  DML => Create or Drop Views or Temp Tables 
+```bash
+
 Views
 ----------------------------------------------------------------
 Definition: A virtual table based on a stored SQL query. They do not store data themselves but dynamically retrieve it from underlying tables based on the query definition.
@@ -262,18 +269,24 @@ Use Cases:
 • Structure data in a way that users or classes of users find natural or intuitive.
 • Restrict access to the data in such a way that a user can see and (somet imes) modify exactly what they need and no more.
 • Summarize data from various tables which can be used to generate reports.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
+```bash
+
 Syntax> Create Views 
 CREATE [VIEW | TEMPORARY TABLE] view_name AS
 SELECT column1, column2.....
 FROM table_name
 WHERE [condi tion];
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+```
+```bash
+
 Syntax> Dropping Views
 DROP VIEW view_name;
-_______________________________________________________________________________________________________________________________________________________
 
---------------------* DML => Create or Drop Temporary Tables *-------------------
+```
+## DML => Create or Drop Temporary Tables 
+```bash
 
 Temporary Tables
 ----------------------------------------------------------------
@@ -287,18 +300,28 @@ Use Cases:
 Storing intermediate results for complex calculations or data manipulation within a query.
 Creating temporary workspaces for calculations or data transformations.
 Sharing data within a session without modifying permanent tables.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
+```bash
+
+
 Syntax> CREATE [GLOBAL] TEMPORARY TABLE AS Temp_Table_Name
 column1 datatype,
 column3 datatype,
 .....
 columnN datatype,
 PRIMARY KEY( one or more columns ) );
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
+```bash
+
 Syntax> Dropping TEMPORARY TABLE
-DROP TABLE Temp_Table_Name;		
-_______________________________________________________________________________________________________________________________________________________
-Choosing between Views and Temporary Tables:
+DROP TABLE Temp_Table_Name;
+
+```
+## Choosing between Views and Temporary Tables:		
+```bash
+
+
+
 ----------------------------------------------------------------
 Use a view when:
 You need to present data in a specific format, filtered or aggregated, on a recurring basis.
@@ -314,9 +337,13 @@ Key Considerations:
 Performance: Views can be slower than accessing underlying tables directly, while temporary tables generally have lower performance than permanent tables.
 Data Integrity: Views reflect changes in underlying tables, while temporary tables are isolated and do not affect data integrity.
 Concurrency: Views and temporary tables can be used concurrently by different users, but be aware of potential locking issues.
-_______________________________________________________________________________________________________________________________________________________
 
---------------------* DML => Procedures*-------------------
+
+```
+## DML => Procedure
+
+```bash
+
 Procedures
 ----------------------------------------------------------------
 Procedures are like pre-packaged mini-programs that encapsulate a series of SQL statements and logic. They offer several advantages for managing database operations and code reusability.
@@ -328,7 +355,6 @@ Modularity and reusability: They encapsulate complex logic into reusable units, 
 Parameters and input/output: They can accept input parameters and return output values, allowing flexibility in data manipulation and processing.
 Transaction control: They can manage transactions explicitly using BEGIN, COMMIT, and ROLLBACK statements, ensuring data consistency.
 Stored in the database: They are stored within the database itself, accessible by authorized users from different applications.
-_______________________________________________________________________________________________________________________________________________________
 
 
 
