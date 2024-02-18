@@ -4,19 +4,19 @@
 
 ```bash
 ___________________________________________________________________________________________________________________________________________________________________
-Structure 			               |Data					                  |Query				         |Security			            |Consistency               		    |
-DDL : Data Definition Language	|DML : Data Manipulation Language	|DQL : Data Query Language	|DCL : Data Control Language	|TCL : Transitional Control Language |
-_________________________________|___________________________________|__________________________|_____________________________|____________________________________|
-Create				               |Insert              					|Select				         |Grand				            |*Commat			                      |
-Alter				                  |Updata					               |*Clause			            |*With Grand			         |*Rollback			                   |	
-Drop				                  |Delete					               |*Grouping			         |Deny				               |*Save Point			                |
-Truncate			                  |Merge					               |*Distinct			         |Revoke				            |				                         |
-Select Into			               |View					                  |*Alias				         |				                  |				                         |
-Index				                  |Temporary Tables			            |*Join 				         |				                  |				                         |
-				                     |Procedure				               |*Set operators			   |				                  |				                         |
-				                     |					                     |*Sub Query			         |				                  |				                         |
-				                     |					                     |*Function			         |				                  |				                         |
-_________________________________|___________________________________|__________________________|_____________________________|____________________________________|
+Structure 			|Data				    |Query		       |Security	             |Consistency                         |
+DDL : Data Definition Language	|DML : Data Manipulation Language   |DQL : Data Query Language |DCL : Data Control Language  |TCL : Transitional Control Language |
+________________________________|___________________________________|__________________________|_____________________________|____________________________________|
+Create				|Insert              		    |Select		       |Grand		             |*Commat			          |
+Alter				|Updata				    |*Clause		       |*With Grand	             |*Rollback			          |	
+Drop				|Delete				    |*Grouping		       |Deny   	                     |*Save Point			  |
+Truncate			|Merge				    |*Distinct		       |Revoke		             |				          |
+Select Into			|View				    |*Alias	               |			     |				          |
+Index				|Temporary Tables		    |*Join 		       |			     |				          |
+				|Procedure			    |*Set Operators            |			     |				          |
+				|				    |*Sub Query		       |			     |				          |
+				|				    |*Function	               |			     |				          |
+________________________________|___________________________________|__________________________|_____________________________|____________________________________|
 
 
 ```
@@ -35,14 +35,14 @@ A set of conditions defining the type of data that can be input into each column
 Constraints ensure data integrity in a table and block undesired actions.
 
 _____________________________________________________________________________________
-Integrity	    |Entity Integrity 		|Referential Integrity		|Domain Integrity |
+Integrity	|Entity Integrity      |Referential Integrity     |Domain Integrity |
 ________________|______________________|__________________________|_________________|
---Constraint	 |PK				         |FK					         |Data Type			|
-------------	 |Identity			      |					            |Default		      |
-------------	 |Unique				      |					            |Null/Not Null		|
+--Constraint	|PK		       |FK	    	          |Data Type	    |
+------------	|Identity	       |			  |Default	    |
+------------	|Unique		       |			  |Null/Not Null    |
 ________________|______________________|__________________________|_________________|
---DB Object	    |Index				      |Trigger				         |Rule			   	|
-------------	 |Trigger			      |					            |Trigger			   |
+--DB Object	|Index		       |Trigger			  |Rule		    |
+------------	|Trigger	       |			  |Trigger	    |
 ________________|______________________|__________________________|_________________|
 
 • NOT NULL Constraint: Ensures that a column cannot have a NULL value.
@@ -56,9 +56,9 @@ You must use the IS NULL or IS NOT NULL operators to check for a NULL value.
 
 • FOREIGN Key: Uniquely identifies row/record in any of the given database tables. The relationship between 2 tables matches the Primary Key in one of the tables with a Foreign Key in the second table.
 
-• CHECK Constraint: The CHECK constraint ensures that all the values in a column satisfies certain conditions.
+• CHECK Constraint: The CHECK constraint ensures that all the values in a column satisfy certain conditions.
 
-• IDENTITY Constraint : a specific data type and constraint combination that automatically generates unique, incrementing values for a specific column in a table. 
+• IDENTITY Constraint: a specific data type and constraint combination that automatically generates unique, incrementing values for a specific column in a table. 
 
 • INDEX: Used to create and retrieve data from the database very quickly. it is assigned a ROWID for each row before it sorts out the data.
 
@@ -75,7 +75,7 @@ You must use the IS NULL or IS NOT NULL operators to check for a NULL value.
 
 ______________________________________________________________________________________________________________________________________________
 Structure
-DDL : Data Definition Language
+DDL: Data Definition Language
 ______________________________________________________________________________________________________________________________________________
 
 --------------------* DDL => Database *-------------------
