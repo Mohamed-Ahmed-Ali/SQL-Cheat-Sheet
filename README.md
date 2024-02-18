@@ -160,7 +160,8 @@ What is an index?
 ----------------------------------------------------------------
 A special data structure related to a database table and used for storing its important parts and enabling faster data search and retrieval. 
 Indexes are especially efficient for large databases, where they significantly enhance query performance.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
+```bash
 What types of indexes?
 ----------------------------------------------------------------
 • Clustered Index: One special index that physically orders table data based on the indexed column(s). 
@@ -168,7 +169,8 @@ This can be very fast for retrieving data sorted by the indexed column but can i
 • Non-Clustered Index: The most common type, separate from the actual data, pointing to rows based on the indexed column(s). 
 Offers a good balance between read and write performance.
 • Unique Index: Ensures each value in the indexed column is unique, enforcing data integrity and uniqueness constraints
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
+```bash
 Syntax> CREATE INDEX:
 CREATE INDEX [Index Type] index_name
 ON table_ name;
@@ -179,16 +181,14 @@ ON table_name (column_name);
 ----------------------------------------------------------------
 Syntax> DROP INDEX:
 DROP INDEX index_name;
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
+```bash
 When should indexes be avoided?
 The following guidelines indicate when the use of an index should be reconsidered.
 • Indexes should not be used on small tables.
 • Tables that have frequent, large batch updates or insert operations.
 • Indexes should not be used on columns that contain a high number of NULL values.
 • Columns that are frequently manipulated should not be indexed.
-_____________________________________________________________________________________________________________________________________________
-
-
 
 ```
 <p>
