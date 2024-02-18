@@ -211,6 +211,7 @@ Syntax> UPDATE table_name
 SET column1 = value1, column2
 = value2...., columnN = valueN
 WHERE [condition];
+```
 
 
 ## DML => Delete
@@ -218,6 +219,7 @@ WHERE [condition];
 
 Syntax> DELETE FROM table_name
 WHERE [condition];
+```
 
 
 ## DML => Merge 
@@ -229,7 +231,7 @@ WHEN MATCHED THEN
   UPDATE SET column1 = value1, column2 = value2, ...
  
 [WHEN NOT MATCHED THEN INSERT (column1, column2, ...) VALUES (value1, value2, ...)]
-
+```
 
 ## MERGE for SCD:
 ```bash
@@ -247,12 +249,10 @@ Alternatives:
 ----------------------------------------------------------------
 Separate statements: For simple ETL jobs, using separate INSERT and UPDATE statements can be more straightforward and efficient.
 ETL tools: Many ETL tools offer specialized features for SCD implementations and complex data transformations.
-
 ```
 
 ##  DML => Create or Drop Views or Temp Tables 
 ```bash
-
 Views
 ----------------------------------------------------------------
 Definition: A virtual table based on a stored SQL query. They do not store data themselves but dynamically retrieve it from underlying tables based on the query definition.
@@ -271,19 +271,15 @@ Use Cases:
 • Summarize data from various tables which can be used to generate reports.
 ```
 ```bash
-
 Syntax> Create Views 
 CREATE [VIEW | TEMPORARY TABLE] view_name AS
 SELECT column1, column2.....
 FROM table_name
 WHERE [condi tion];
-
 ```
 ```bash
-
 Syntax> Dropping Views
 DROP VIEW view_name;
-
 ```
 ## DML => Create or Drop Temporary Tables 
 ```bash
@@ -315,7 +311,6 @@ PRIMARY KEY( one or more columns ) );
 
 Syntax> Dropping TEMPORARY TABLE
 DROP TABLE Temp_Table_Name;
-
 ```
 ## Choosing between Views and Temporary Tables:		
 ```bash
@@ -337,13 +332,10 @@ Key Considerations:
 Performance: Views can be slower than accessing underlying tables directly, while temporary tables generally have lower performance than permanent tables.
 Data Integrity: Views reflect changes in underlying tables, while temporary tables are isolated and do not affect data integrity.
 Concurrency: Views and temporary tables can be used concurrently by different users, but be aware of potential locking issues.
-
-
 ```
 ## DML => Procedure
 
 ```bash
-
 Procedures
 ----------------------------------------------------------------
 Procedures are like pre-packaged mini-programs that encapsulate a series of SQL statements and logic. They offer several advantages for managing database operations and code reusability.
@@ -355,10 +347,6 @@ Modularity and reusability: They encapsulate complex logic into reusable units, 
 Parameters and input/output: They can accept input parameters and return output values, allowing flexibility in data manipulation and processing.
 Transaction control: They can manage transactions explicitly using BEGIN, COMMIT, and ROLLBACK statements, ensuring data consistency.
 Stored in the database: They are stored within the database itself, accessible by authorized users from different applications.
-
-
-
-
 ```
 
 <p>
