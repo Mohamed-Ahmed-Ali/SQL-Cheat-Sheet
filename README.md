@@ -71,22 +71,20 @@ You must use the IS NULL or IS NOT NULL operators to check for a NULL value.
 
 <details><summary>DDL : Data Definition Language</summary><p>
 
+# Structure
+
+
+## DDL => Database 
 ```bash
-
-______________________________________________________________________________________________________________________________________________
-Structure
-DDL: Data Definition Language
-______________________________________________________________________________________________________________________________________________
-
---------------------* DDL => Database *-------------------
 
 Syntax> CREATE DATABASE DatabaseName;
 Syntax> DROP DATABASE DatabaseName;
 Syntax> SHOW DATABASES;
 Syntax> USE DatabaseName;
-______________________________________________________________________________________________________________________________________________
+```
+## DDL => Create Table
+```bash
 
---------------------* DDL => Create Table *-------------------
 
 Syntax> Create Table:
 CREATE TABLE table_ name(
@@ -103,43 +101,50 @@ AGE 	INT NOT NULL,
 ADDRESS CHAR (25) ,
 SALARY 	DECIMAL (18, 2),
 PRIMARY KEY (ID));
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Creating a Table from an Existing Table:
 ----------------------------------------------------------------
 Syntax> CREATE TABLE NEW_TABLE_NAME AS
 SELECT [ column1, column 2...columnN ]
 FROM EXISTING_TABLE_NAME
 [WHERE condition]
-_____________________________________________________________________________________________________________________________________________
-
---------------------* DDL => Drop or Truncate Table *-------------------
-
+```
+## DDL => Drop or Truncate Table
+```bash
 Syntax> Drop or Truncate TABLE table_ name;
-_____________________________________________________________________________________________________________________________________________
+```
 
---------------------* DDL => Alter Table *-------------------
+
+## DDL => Alter Table
+```bash
 Add New Column:
 Syntax> ALTER TABLE EXISTING_TABLE_NAME
 ADD COLUNM columnN datatype
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
+```bash
 Change Exisit Column Data Type:
 Syntax> ALTER TABLE EXISTING_TABLE_NAME
 ALTER COLUNM columnN datatype
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
+```bash
 Alter Table Add Constraint:
 Syntax> ALTER TABLE EXISTING_TABLE_NAME
 ADD CONSTRAINT columnN Constraint
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
+```bash
 Drop Constraint:
 Syntax> ALTER TABLE EXISTING_TABLE_NAME
 DROP CONSTRAINT columnN Constraint
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
+```bash
 Drop Column:
 Syntax> ALTER TABLE EXISTING_TABLE_NAME
 DROP COLUNM columnN
-_____________________________________________________________________________________________________________________________________________
+```
 
---------------------* DDL => SELECT INTO *-------------------
+
+## DDL => SELECT INTO 
+```bash
 SELECT INTO: The Direct Copycat
 ----------------------------------------------------------------
 Definition: Takes a SELECT statement and directly inserts the results into a new table (permanent or temporary).
@@ -148,9 +153,9 @@ Syntax> SELECT [ column1, column 2...columnN ]
 FROM EXISTING_TABLE_NAME
 [WHERE condition]
 INTO NEW_TABLE_NAME;
-____________________________________________________________________________________________________________________________________________
-
---------------------* DDL => INDEX *-------------------
+```
+## DDL => INDEX -
+```bash
 What is an index?
 ----------------------------------------------------------------
 A special data structure related to a database table and used for storing its important parts and enabling faster data search and retrieval. 
@@ -161,7 +166,7 @@ What types of indexes?
 • Clustered Index: One special index that physically orders table data based on the indexed column(s). 
 This can be very fast for retrieving data sorted by the indexed column but can impact write performance.
 • Non-Clustered Index: The most common type, separate from the actual data, pointing to rows based on the indexed column(s). 
-Offers good balance between read and write performance.
+Offers a good balance between read and write performance.
 • Unique Index: Ensures each value in the indexed column is unique, enforcing data integrity and uniqueness constraints
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Syntax> CREATE INDEX:
