@@ -392,10 +392,10 @@ column
 FROM table_name
 WHERE [condition1] AND | OR [condi tion2]...AND | OR [conditionN];
 ```
-```bash
 
-**LIKE | Wildcard
-----------------------------------------------------------------
+
+### **LIKE | Wildcard
+```bash
 Used for pattern matching in strings.
 • The percent sign (%)
 • The underscore (_)
@@ -406,12 +406,11 @@ WHERE column [LIKE | Wildcard] ['XXXX%' | '%XXXX%' | 'XXXX_' | '_XXXX' | '_XXXX_
 ```
 ```bash
 
-*ORDER BY Clause & SORTING
+### *ORDER BY Clause & SORTING
 ----------------------------------------------------------------
 Results ascending or descending order, ascending order by default.
 ```
 ```bash
-
 Syntax>  SELECT column -list
 FROM table_name
 [WHERE condition]
@@ -420,7 +419,7 @@ FROM table_name
 ```
 ```bash
 
-*TOP, LIMIT or ROWNUM Clause
+### *TOP, LIMIT or ROWNUM Clause
 ----------------------------------------------------------------
 Limiting Results:
 ```
@@ -430,17 +429,14 @@ FROM table_name
 WHERE [condition]
 ```
 ```bash
-
 TOP (Transact-SQL): Returns the specified number of rows from the beginning.
 SQL> SELECT TOP 3 * FROM CUSTOMERS;
 ```
 ```bash
-
 LIMIT (MySQL, PostgreSQL): Returns the specified number of rows starting from a specific offset. 
 SQL> SELECT * FROM CUSTOMERS LIMIT 3;
 ```
 ```bash
-
 ROWNUM (Oracle): Returns a row number for each row, allowing filtering based on position.
 SQL> SELECT * FROM CUSTOMERS WHERE ROWNUM <= 3;
 ```
@@ -455,10 +451,10 @@ WHERE [ conditions ]
 GROUP BY column1, column2
 ORDER BY column1, column2
 ```
-```bash
 
-**HAVING Clause
----------------------------------------------------------
+
+### **HAVING Clause
+```bash
 HAVING: Filters groups based on conditions after GROUP BY.
 ```
 ```bash
