@@ -350,20 +350,22 @@ Stored in the database: They are stored within the database itself, accessible b
 <details><summary> Data Query Language </summary><p>
 
 
-## Query
-DQL => Select *-------------------
+# Query
+## DQL => Select
 ```bash
 Select is a fundamental statement used to retrieve data from tables and views.
 ----------------------------------------------------------------
 SELECT:
 Syntax> SELECT column1, column2,columnN FROM table_ name;
 ```
-## * DQL => Clause *-------------------
+## * DQL => Clause
 ```bash
 What is a clause?
-A condition imposed on a SQL query to filter the data to obtain the desired result. Some examples are WHERE, LIMIT, HAVING, LIKE, AND, OR, ORDER BY, etc.
+A condition imposed on a SQL query to filter the data to obtain the desired result.
+Some examples are WHERE, LIMIT, HAVING, LIKE, AND, OR, ORDER BY, etc.
 ----------------------------------------------------------------
-*WHERE Clause (Filter) is used within a SELECT, UPDATE, or DELETE statement to specify a condition that must be true for a row to be included in the result set or affected by the operation.
+*WHERE Clause (Filter) is used within a SELECT, UPDATE, or DELETE statement to specify a condition
+that must be true for a row to be included in the result set or affected by the operation.
 ```
 ```bash
 
@@ -402,7 +404,6 @@ Used for pattern matching in strings.
 • The underscore (_)
 ```
 ```bash
-
 Syntax> SELECT FROM table_name
 WHERE column [LIKE | Wildcard] ['XXXX%' | '%XXXX%' | 'XXXX_' | '_XXXX' | '_XXXX_']
 ```
@@ -448,15 +449,12 @@ SQL> SELECT * FROM CUSTOMERS WHERE ROWNUM <= 3;
 ```bash
 
 ```
-## DQL => Grouping *-------------------
+## DQL => Grouping
 ```bash
 
-
-*GROUP BY
-----------------------------------------------------------------
 GROUP BY: Groups rows based on specified columns. 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Syntax> SELECT column1, column2
+```
+```bashSyntax> SELECT column1, column2
 FROM table_name
 WHERE [ conditions ]
 GROUP BY column1, column2
@@ -465,9 +463,10 @@ ORDER BY column1, column2
 ```bash
 
 **HAVING Clause
-----------------------------------------------------------------
+---------------------------------------------------------
 HAVING: Filters groups based on conditions after GROUP BY.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
+```bash
 Syntax> SELECT column1, column2
 FROM table1, table2
 WHERE [ conditions ]
@@ -477,8 +476,6 @@ ORDER BY column1, column2
 ```
 ## DQL => Distinct *-------------------
 ```bash
-*Distinct Keyword
-----------------------------------------------------------------
 DISTINCT: Removes duplicate rows from the result set.
 ```
 ```bash
@@ -490,7 +487,7 @@ WHERE [condi tion]
 ```
 
 
-## DQL => Alias *-------------------
+## DQL => Alias
 
 ```bash
 *Alias	
@@ -516,12 +513,10 @@ WHERE [condi tion];
 
 
 ## DQL => Alias
-```
-
-*Join
-----------------------------------------------------------------
+```bash
 What is a join?
-A clause used to combine and retrieve records from two or multiple tables. SQL tables can be joined based on the relationship between the columns of those tables. Check out our SQL joins tutorial for more context. 
+A clause used to combine and retrieve records from two or multiple tables. SQL tables can be joined based
+on the relationship between the columns of those tables. Check out our SQL joins tutorial for more context. 
 ----------------------------------------------------------------
 What types of joins do you know?
 • INNER JOIN:  – returns only those records that satisfy a defined join condition in both (or all) tables. It's a default SQL join.
@@ -530,14 +525,11 @@ What types of joins do you know?
 • FULL JOIN: – returns all records from both (or all) tables. It can be considered as a combination of left and right joins.
 ```
 ```bash
-
 Syntax> SELECT table1.column1, table2.colum n2... FROM table1
 [INNER JOIN | LEFT JOIN | RIGHT JOIN | FULL JOIN] table2
 ON table1.common_field = table2.common_field;
 ```
 ```bash
-
-
 • SELF JOIN: is used to join a table to itself as if the table were two tables, temporarily renaming at least one table in the SQL statement.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 SQL> SELECT
@@ -568,7 +560,6 @@ To use this, each SELECT statement must have
 • Have them in the same order
 ```
 ```bash
-
 SELECT column1 [, column2 ]
 FROM table1 [, table2 ]
 [WHERE condition]
@@ -588,7 +579,9 @@ FROM table1 [, table2 ]
 *Sub Query	
 ----------------------------------------------------------------
 What is a subquery?
-Also called an inner query; a query placed inside another query, or an outer query. A subquery may occur in the clauses such as SELECT, FROM, WHERE, UPDATE, etc. It's also possible to have a subquery inside another subquery. The innermost subquery is run first, and its result is passed to the containing query (or subquery).
+Also called an inner query; a query placed inside another query, or an outer query. A subquery may occur in
+the clauses such as SELECT, FROM, WHERE, UPDATE, etc. It's also possible to have a subquery inside another subquery.
+The innermost subquery is run first, and its result is passed to the containing query (or subquery).
 ----------------------------------------------------------------
 What types of SQL subqueries do you know?
 Single-row – returns at most one row.
@@ -598,8 +591,6 @@ Correlated – a subquery related to the information from the outer query.
 Nested – a subquery inside another subquery.
 ```
 ```bash
-
-
 Syntax> SELECT outer_column1, outer_column2, ...
 FROM outer_table_name
 WHERE condition (
@@ -611,8 +602,6 @@ WHERE condition (
 ## DQL => Function
 
 ```bash
-*Function
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 What types of SQL functions do you know?
 ----------------------------------------------------------------
 Return a single value: Their primary purpose is to calculate or transform data and return a single result.
@@ -633,7 +622,6 @@ FIRST() – returns the first value from a column
 LAST()– returns the last value from a column
 ```
 ```bash
-
 What scalar functions do you know?
 ----------------------------------------------------------------
 LEN() (in other SQL flavors – LENGTH()) – returns the length of a string, including the blank spaces
