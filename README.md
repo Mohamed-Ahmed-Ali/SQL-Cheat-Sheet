@@ -641,11 +641,9 @@ ________________________________________________________________________________
 <details><summary>TCL : Transitional Control Language
 </summary><p>
 
+# Consistency
+## TCL: Transitional Control Language
 ```bash
-__________________________________________________________________________________________
-Consistency
-TCL: Transitional Control Language
-__________________________________________________________________________________________
 Transactions have four standard properties, usually referred to by the acronym ACID.
 • Atomicity: ensures that all operations within the work unit are completed successfully.
 Otherwise, the transaction is aborted at the point of failure, and all the previous
@@ -659,37 +657,37 @@ transaction persists in case of a system failure.
 The following commands are used to control transactions.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ```
+# TCL => COMMIT
 ```bash
---------------------* TCL => COMMIT *-------------------
 • COMMIT: to save the changes.
 ----------------------------------------------------------------
 Syntax> COMMIT;
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ```
+# TCL => ROLLBACK
 ```bash
---------------------* TCL => ROLLBACK *-------------------
 • ROLLBACK: to roll back the changes.
 ----------------------------------------------------------------
 Syntax> ROLLBACK;
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ```
+# TCL => SAVEPOINT
 ```bash
---------------------* TCL => SAVEPOINT *-------------------
 • SAVEPOINT: creates points within the groups of transactions to ROLLBACK.
 ----------------------------------------------------------------
 Syntax> SAVEPOINT SAVEPO INT_NAME;
 ROLLBACK TO SAVEPO INT_NAME;
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ```
+# TCL => SET TRANSACTION
 ```bash
---------------------* TCL => SET TRANSACTION *-------------------
 • SET TRANSACTION: Places a name on a transaction.
 ----------------------------------------------------------------
 Syntax> SET TRANSACTION [ READ WRITE | READ ONLY ];
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ```
+# The RELEASE SAVEPOINT
 ```bash
---------------------* TCL => The RELEASE SAVEPOINT *-------------------
 • The RELEASE SAVEPOINT
 ----------------------------------------------------------------
 Syntax> RELEASE SAVEPOINT
