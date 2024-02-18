@@ -622,16 +622,16 @@ ________________________________________________________________________________
 # Security
 ## DCL => Grand
 ```bash
-Grand	
-----------------------------------------------------------------
 Grants specific privileges (e.g., SELECT, INSERT, UPDATE, DELETE) on a database object (e.g., table, view, procedure) to a user or group.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
+```bash
 Syntax> GRANT privilege ON object_name TO user/group;
 ```
 ## DCL => Deny 
 ```bash
 Explicitly prohibits specific privileges on an object to a user or group, even if they have been granted elsewhere.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
+```bash
 Syntax> DENY privilege ON object_name TO user/group;
 ```
 
@@ -639,10 +639,9 @@ Syntax> DENY privilege ON object_name TO user/group;
 ## DCL  => Revoke
 
 ```bash
-Revoke	
-----------------------------------------------------------------
 Removes previously granted privileges from a user or group.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
+```bash
 Syntax> REVOKE privilege ON object_name FROM user/group;
 ```
 
