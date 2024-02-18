@@ -426,7 +426,8 @@ FROM table_name
 *TOP, LIMIT or ROWNUM Clause
 ----------------------------------------------------------------
 Limiting Results:
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
+```bash
 Syntax> SELECT TOP number | percent column name(s)
 FROM table_name
 WHERE [condition]
@@ -445,9 +446,6 @@ SQL> SELECT * FROM CUSTOMERS LIMIT 3;
 
 ROWNUM (Oracle): Returns a row number for each row, allowing filtering based on position.
 SQL> SELECT * FROM CUSTOMERS WHERE ROWNUM <= 3;
-```
-```bash
-
 ```
 ## DQL => Grouping
 ```bash
@@ -474,12 +472,11 @@ GROUP BY column1, column2
 HAVING [ conditions ]
 ORDER BY column1, column2
 ```
-## DQL => Distinct *-------------------
+## DQL => Distinct
 ```bash
 DISTINCT: Removes duplicate rows from the result set.
 ```
 ```bash
-
 Syntax> SELECT DISTINCT column1,
 column 2,.....co lumnN
 FROM table_name
@@ -490,13 +487,10 @@ WHERE [condi tion]
 ## DQL => Alias
 
 ```bash
-*Alias	
-----------------------------------------------------------------
 What is an alias?
 A temporary name given to a table (or a column in a table) while executing a certain SQL query. 
 ```
 ```bash
-
 TABLE ALIAS:
 ----------------------------------------------------------------
 Syntax> SELECT column1, column 2....
@@ -504,7 +498,6 @@ FROM table_name AS alias_name
 WHERE [condition];
 ```
 ```bash
-
 COLUMN ALIAS:
 ----------------------------------------------------------------
 Syntax> SELECT column name AS alias_name FROM table_name
@@ -512,7 +505,7 @@ WHERE [condi tion];
 ```
 
 
-## DQL => Alias
+## DQL => Joins
 ```bash
 What is a join?
 A clause used to combine and retrieve records from two or multiple tables. SQL tables can be joined based
