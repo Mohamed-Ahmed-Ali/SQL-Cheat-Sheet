@@ -655,21 +655,18 @@ operations are rolled back to their former state.
 transaction persists in case of a system failure.
 ----------------------------------------------------------------
 The following commands are used to control transactions.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ```
 ## TCL => COMMIT
 ```bash
 • COMMIT: to save the changes.
 ----------------------------------------------------------------
 Syntax> COMMIT;
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ```
 ## TCL => ROLLBACK
 ```bash
 • ROLLBACK: to roll back the changes.
 ----------------------------------------------------------------
 Syntax> ROLLBACK;
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ```
 ## TCL => SAVEPOINT
 ```bash
@@ -677,14 +674,12 @@ Syntax> ROLLBACK;
 ----------------------------------------------------------------
 Syntax> SAVEPOINT SAVEPO INT_NAME;
 ROLLBACK TO SAVEPO INT_NAME;
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ```
 ## TCL => SET TRANSACTION
 ```bash
 • SET TRANSACTION: Places a name on a transaction.
 ----------------------------------------------------------------
 Syntax> SET TRANSACTION [ READ WRITE | READ ONLY ];
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ```
 ## TCL => The RELEASE SAVEPOINT
 ```bash
@@ -692,7 +687,6 @@ Syntax> SET TRANSACTION [ READ WRITE | READ ONLY ];
 ----------------------------------------------------------------
 Syntax> RELEASE SAVEPOINT
 SAVEPOINT NAME;
-____________________________________________________________________________________
 ```
 
 --------------------------------------------------------------------------------------------------
