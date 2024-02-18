@@ -358,7 +358,7 @@ Select is a fundamental statement used to retrieve data from tables and views.
 SELECT:
 Syntax> SELECT column1, column2,columnN FROM table_ name;
 ```
-## * DQL => Clause
+## DQL => Clause
 ```bash
 What is a clause?
 A condition imposed on a SQL query to filter the data to obtain the desired result.
