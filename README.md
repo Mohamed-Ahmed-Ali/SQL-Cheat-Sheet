@@ -417,10 +417,9 @@ FROM table_name
 [ORDER BY column1, column2,
 .. columnN] [ASC | DESC];
 ```
-```bash
 
 ### *TOP, LIMIT or ROWNUM Clause
-----------------------------------------------------------------
+```bash
 Limiting Results:
 ```
 ```bash
