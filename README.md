@@ -368,7 +368,6 @@ Some examples are WHERE, LIMIT, HAVING, LIKE, AND, OR, ORDER BY, etc.
 that must be true for a row to be included in the result set or affected by the operation.
 ```
 ```bash
-
 Syntax> SELECT column1, column2,
 column
 FROM table_name
@@ -381,15 +380,13 @@ Comparison operators: Use operators like =, >, <, >=, <=, and != to compare valu
 Logical operators: Combine conditions using AND, OR, and NOT to create complex filters.
 Functions: Use built-in functions for calculations, string manipulations, and other operations within the condition.)
 ```
+### **The AND | OR Operator
 ```bash
-**The AND | OR Operator
-----------------------------------------------------------------
 Logical Operators:
 AND: Returns TRUE only if both conditions connected by AND are TRUE. 
 OR: Returns TRUE if at least one of the conditions connected by OR is TRUE. 
 ```
 ```bash
-
 Syntax> SELECT column1, column2,
 column
 FROM table_name
